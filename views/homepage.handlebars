@@ -1,0 +1,24 @@
+<div>
+<!-- Loop over each object in the recipes array -->
+{{#each recipes as |recipe| }}
+<div class="row mb-4 recipe">
+  <div class="col-md-5">
+    <h2>
+      <a href="/recipe/{{recipe.id}}">{{recipe.title}}</a>
+    </h2>
+    <p>Cooked by {{recipe.user.username}}</p>
+  </div>
+  <div class="col-md-7">
+    <p>
+      {{recipe.description}}
+    </p>
+    <p>
+      {{recipe.ingredients}}
+    </p>
+    <p>
+      {{recipe.directions}}
+    </p>
+  </div>
+</div>
+{{/each}}
+</div>
